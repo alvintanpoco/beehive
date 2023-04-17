@@ -15,7 +15,7 @@ type Props = {
 const BeeHivePlot: React.FC<Props> = ({ data, width, height }) => {
   const svgRef = useRef<SVGSVGElement>(null);
 
-  useEffect(() => {
+    useEffect(() => {
     if (!svgRef.current) return;
 
     // set up the D3 chart
@@ -48,8 +48,9 @@ const BeeHivePlot: React.FC<Props> = ({ data, width, height }) => {
 
   }, [data, height, width]);
 
-  return (
-    <svg ref={svgRef} width={width} height={height} />
+  return (<div >
+            <svg ref={svgRef} width={width} height={height} />
+          </div>
   );
 };
 
